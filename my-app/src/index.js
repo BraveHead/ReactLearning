@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import PropTypes from 'prop-types';
 import logo from './logo.svg';
 // import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 // ReactDOM.render(<App />, document.getElementById('root'));
-
 
 //动态改变数据，也只会改变索要改变数据的DOM，但是只会改变所需要改变数据的DOM不会改变ROOTDOM
 /*
@@ -669,4 +669,169 @@ ReactDOM.render(
     document.getElementById('composition')
 )
 
+//深入理解JSX
+/*
+
+const myComponents = {
+    DatePicker: function (props) {
+        return <div>Now color is {props.color}</div>
+    }
+}
+function BlueDatePicker() {
+    return <myComponents.DatePicker color='red'/>
+}
+ReactDOM.render(
+    <BlueDatePicker/>,
+    document.getElementById('entry-jsx')
+)
+*/
+
+//拓展属性
+
+/*
+function Greeting(props) {
+    return <div>{'My name is:' + props.firstName + ',' + props.lastName}</div>
+}
+
+function  App2() {
+    const props = {firstName:'Zhang', lastName:'Shun'};
+    return <Greeting {...props}/>
+}
+
+ReactDOM.render(
+    <App2/>,
+    document.getElementById('entry-jsx')
+)
+*/
+
+//PropTypes 检测静态类型
+
+function Person(props) {
+    return <div>props.username</div>
+}
+
+class Greeting extends React.Component{
+    render() {
+        return (
+            <div>
+                <h1>Hello, {this.props.name}</h1>
+
+            </div>
+        );
+    }
+}
+Greeting.propTypes = {
+    name:PropTypes.string
+}
+
+//只传递一个子代
+class MyComponent extends  React.Component{
+    render() {
+        const children = this.props.children;
+        return (
+            <div>{children}</div>
+        )
+    }
+}
+MyComponent.propTypes = {
+    children: PropTypes.element.isRequired
+}
+
+//属性默认值
+class Deauflet extends React.Component{
+    static defaultProps = {
+        name:'SB'
+    }
+    render() {
+        return (
+            <div>
+                Hello, {this.props.name}
+            </div>
+        )
+    }
+}
+// Deauflet.defaultProps = {
+//     name: 'ZhangShun'
+// }
+ReactDOM.render(
+    <Deauflet/>,
+    document.getElementById('entry-jsx')
+)
+//给DOM添加Ref
+// class CustomTextInput extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.focus = this.focus.bind(this);
+//     }
+//     focus() {
+//         this.textInput.focus();
+//     }
+//     render(){
+//         return (
+//             <div>
+//                 <input ref={input => this.textInput = input}/>
+//                 <button type='submit' value='Focus Input' onClick={this.focus}>
+//                     Focus!
+//                 </button>
+//             </div>
+//         );
+//     }
+// }
+//给类组件添加ref
+// class AutoFocusTextInput extends React.Component{
+//     componentDidMount(){
+//         this.textInput.focus();
+//     }
+//     render(){
+//         return <CustomTextInput ref={element => this.textInput = element}/>
+//     }
+// }
+
+//refs与函数式组件
+    //不能直接在函数式组件上使用ref,因为函数式组件没有实例，但是可以在函数式组件的内部去使用它，只要它指向一个dom或者一个class组件
+function CustomTextInput() {
+    let textInput = null;
+    function focus() {
+        textInput.focus();
+    }
+    return (
+        <div>
+            <input type='text' ref={input => textInput = input}/>
+            <button type='submit' onClick={focus}>Focus!</button>
+        </div>
+    );
+}
+
+//对父组件暴露DOM节点
+function CustomInput(props) {
+    return (
+        <div>
+            <input ref={ props.inputRef }/>
+        </div>
+    );
+}
+function Parent(props) {
+    return (
+        <div>
+            my input: <CustomInput inputRef={props.inputRef}/>
+        </div>
+    )
+}
+
+class GrandParent extends React.Component{
+    constructor(props){
+        super(props);
+    }
+    componentDidMount(){
+        this.inputElement.focus();
+    }
+    render(){
+        return <Parent inputRef={el => this.inputElement = el}/>
+    }
+}
+ReactDOM.render(
+    <GrandParent/>,
+    document.getElementById('ref')
+)
+//提交到Dev  测试dev => master
 registerServiceWorker();
