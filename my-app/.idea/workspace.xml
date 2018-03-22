@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fdc1095b-13e1-4199-b135-b3978cd43ab5" name="Default" comment="" />
+    <list default="true" id="fdc1095b-13e1-4199-b135-b3978cd43ab5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -52,14 +54,15 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="832" column="19" lean-forward="true" selection-start-line="832" selection-start-column="19" selection-end-line="832" selection-end-column="19" />
+            <state relative-caret-position="384">
+              <caret line="847" column="39" lean-forward="false" selection-start-line="847" selection-start-column="39" selection-end-line="847" selection-end-column="39" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#3651#4204#0" expanded="false" />
                 <element signature="e#4780#4815#0" expanded="false" />
                 <element signature="e#5518#5551#0" expanded="false" />
                 <element signature="e#15016#15315#0" expanded="false" />
+                <element signature="n#GrandParent#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -298,7 +301,7 @@
       <workItem from="1521532086059" duration="1933000" />
       <workItem from="1521545884923" duration="30028000" />
       <workItem from="1521641642511" duration="3534000" />
-      <workItem from="1521681500683" duration="16084000" />
+      <workItem from="1521681500683" duration="17698000" />
     </task>
     <task id="LOCAL-00001" summary="为类组件添加ref">
       <created>1521697922242</created>
@@ -339,7 +342,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61982000" />
+    <option name="totallyTimeSpent" value="63596000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -352,7 +355,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16754757" sideWeight="0.490161" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -363,7 +365,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5735462" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14957717" sideWeight="0.509839" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37514254" sideWeight="0.49577168" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37286204" sideWeight="0.49577168" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50695825" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -438,6 +440,7 @@
             <element signature="e#4780#4815#0" expanded="false" />
             <element signature="e#5518#5551#0" expanded="false" />
             <element signature="e#15016#15315#0" expanded="false" />
+            <element signature="n#GrandParent#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -542,6 +545,7 @@
             <element signature="e#4780#4815#0" expanded="false" />
             <element signature="e#5518#5551#0" expanded="false" />
             <element signature="e#15016#15315#0" expanded="false" />
+            <element signature="n#GrandParent#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -823,14 +827,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="832" column="19" lean-forward="true" selection-start-line="832" selection-start-column="19" selection-end-line="832" selection-end-column="19" />
+        <state relative-caret-position="384">
+          <caret line="847" column="39" lean-forward="false" selection-start-line="847" selection-start-column="39" selection-end-line="847" selection-end-column="39" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#3651#4204#0" expanded="false" />
             <element signature="e#4780#4815#0" expanded="false" />
             <element signature="e#5518#5551#0" expanded="false" />
             <element signature="e#15016#15315#0" expanded="false" />
+            <element signature="n#GrandParent#0" expanded="false" />
           </folding>
         </state>
       </provider>

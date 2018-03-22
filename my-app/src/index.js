@@ -829,11 +829,31 @@ class GrandParent extends React.Component{
         return <Parent inputRef={el => this.inputElement = el}/>
     }
 }
+// ReactDOM.render(
+//     <GrandParent/>,
+//     document.getElementById('ref')
+// )
+//非受控组件
+class NameForm extends React.Component{
+    constructor (props){
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    handleSubmit(){
+        alert('Now input value is:' + this.textInput.value);
+    }
+    render(){
+        return (
+            <div>
+                <input defaultValue={23} type='text' ref={input => this.textInput = input}/>
+                <input type='submit' value='submit' onClick={this.handleSubmit}/>
+            </div>
+        );
+    }
+}
+//
 ReactDOM.render(
-    <GrandParent/>,
+    <NameForm/>,
     document.getElementById('ref')
 )
-//提交到Dev  测试dev => master
-
-//再次提交
 registerServiceWorker();
