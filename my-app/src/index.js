@@ -851,9 +851,42 @@ class NameForm extends React.Component{
         );
     }
 }
-//
+//浅比较
+class ListOfWorlds extends React.PureComponent{
+    constructor (props){
+        super(props);
+        this.state = {
+            words: ['mark']
+        };
+        this.handleAdd = this.handleAdd.bind(this);
+    }
+    handleAdd(){
+        //赋值的时候 尽量在外部写新的变量，，要是直接或者数据再处理直接赋值再state对象上会报错
+        // const words = this.state.words;
+        // words.push('mar2');
+        // this.setState({
+        //     words: words
+        // })
+        // function newState(state, mark) {
+        //     return Object.assign({}, state, {words: state.words.concat([mark])})
+        // }
+        
+        this.setState(prevState => ({
+            words: [...prevState.words, 'mark']
+        }))
+    }
+    render(){
+        let str = (this.state.words).join();
+        return (
+            <div>
+                <div>{str}</div>
+                <input type='submit' onClick={this.handleAdd}/>
+            </div>
+        );
+    }
+}
 ReactDOM.render(
-    <NameForm/>,
+    <ListOfWorlds/>,
     document.getElementById('ref')
 )
 registerServiceWorker();
